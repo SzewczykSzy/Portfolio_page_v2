@@ -1,0 +1,48 @@
+/* App.css */
+
+.light-mode {
+  --border-color: #bbb; /* Light mode border color */
+  --background-color: #ffffff; /* Light mode background color */
+  --navbar-footer-background-color: #eaeaea; /* Light mode navbar and footer background color */
+  --main-background-color: #ffffff; /* Light mode main background color */
+  --text-color: #000000; /* Light mode text color */
+}
+
+.dark-mode {
+  --border-color: #888888; /* Dark mode border color */
+  --navbar-footer-background-color: #000000; /* Dark mode navbar and footer background color */
+  --main-background-color: #161b22; /* Dark mode main background color */
+  --text-color: #ffffff; /* Dark mode text color */
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 0; /* Remove margin */
+}
+
+main {
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0; /* Remove margin */
+  padding: 1rem; /* Add padding if needed */
+}
+
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color); /* Use variable border color */
+  border-bottom: 1px solid var(--border-color); /* Use variable border color */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: var(--navbar-footer-background-color);
+  color: var(--text-color); /* Use text color variable */
+}

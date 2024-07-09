@@ -1,0 +1,12 @@
+/* Footer.css */
+
+.footer {
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color); /* Use variable border color */
+    border-bottom: 1px solid var(--border-color); /* Use variable border color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: var(--navbar-footer-background-color);
+    color: #757474;
+  }
+  
