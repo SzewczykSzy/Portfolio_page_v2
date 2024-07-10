@@ -1,0 +1,206 @@
+/* Home.css */
+
+/* Styles specific to the home page */
+.view-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px; /* Adjust the max-width to control the overall width */
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 40px; /* Add more padding on the left */
+    padding-right: 40px; /* Add more padding on the right */
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 40px;
+}
+
+.view-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 100%;
+}
+
+.description-section {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.description-text {
+    flex: 1;
+}
+
+.view-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.view-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.view-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.view-content ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.view-content ul li::before {
+    content: attr(data-emoji);
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.view-content ul li span {
+    display: inline;
+}
+
+.view-content ul li a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 5px;
+}
+
+.view-content ul li a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Project styles specific to the home page */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project p {
+    margin: 10px 0 0;
+}
+
+/* Skills styles specific to the home page */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill h3 {
+    margin-top: 0;
+    font-size: 1.2em; /* Make the skill title smaller */
+}
+
+.skill p {
+    margin: 5px 0 0;
+    font-size: 0.9em; /* Make the skill description smaller */
+}
+
+/* Icon styles */
+.skill-icon {
+    font-size: 3vw; /* Default icon size relative to viewport width */
+    margin-bottom: 10px;
+}
+
+/* Adjust margin for hr element */
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 40px 0 30px; /* Increase margin-top to add more space above hr */
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .profile-photo {
+        display: none; /* Hide the photo on small screens */
+    }
+
+    .description-section {
+        flex-direction: column;
+    }
+
+    .view-content ul li {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .view-content ul li::before {
+        margin-bottom: 0;
+    }
+
+    .view-content ul li span {
+        display: inline;
+    }
+
+    /* Reduce padding on small screens */
+    .view-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Smaller icon size for small screens */
+    .skill-icon {
+        font-size: 5vw; /* Adjust icon size for smaller screens */
+    }
+
+    .skill h3 {
+        font-size: 1em; /* Make the skill title smaller on small screens */
+    }
+
+    .skill p {
+        font-size: 0.8em; /* Make the skill description smaller on small screens */
+    }
+}
+
+/* Media query for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .skill-icon {
+        font-size: 4vw; /* Adjust icon size for medium screens */
+    }
+
+    .skill h3 {
+        font-size: 1.1em; /* Make the skill title smaller on medium screens */
+    }
+
+    .skill p {
+        font-size: 0.85em; /* Make the skill description smaller on medium screens */
+    }
+}

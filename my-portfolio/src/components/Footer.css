@@ -1,12 +1,49 @@
-/* Footer.css */
-
 .footer {
-    padding: 1rem 0;
-    text-align: center;
-    border-top: 1px solid var(--border-color); /* Use variable border color */
-    border-bottom: 1px solid var(--border-color); /* Use variable border color */
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    background-color: var(--navbar-footer-background-color);
-    color: #757474;
-  }
-  
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  background-color: var(--navbar-footer-background-color);
+  color: var(--text-color);
+}
+
+.social-media-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media-icons a {
+  transition: color 0.3s;
+}
+
+.custom-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--icon-color);
+  transition: fill 0.3s;
+}
+
+.custom-icon:hover {
+  fill: var(--icon-hover-color);
+}
+
+/* Light mode variables */
+.light-mode {
+  --border-color: #bbb;
+  --navbar-footer-background-color: #eaeaea;
+  --text-color: #000000;
+  --icon-color: #000000;
+  --icon-hover-color: #555555;
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --border-color: #888888;
+  --navbar-footer-background-color: #000000;
+  --text-color: #ffffff;
+  --icon-color: #ffffff;
+  --icon-hover-color: #aaaaaa;
+}

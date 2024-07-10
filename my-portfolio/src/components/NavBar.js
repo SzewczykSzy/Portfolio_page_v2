@@ -2,18 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
-// import styled from 'styled-components';
-
-// const NavbarButton = styled.button`
-//   /* existing styles */
-
-//   &:focus,
-//   &:active,
-//   &:focus-visible {
-//     outline: none;
-//     box-shadow: none;
-//   }
-// `;
 
 const NavBar = ({ darkMode, toggleDarkMode }) => {
   return (
@@ -32,6 +20,7 @@ const NavBar = ({ darkMode, toggleDarkMode }) => {
           <div className="trigger">
             <Link className="page-link navbar-button" to="/about">About</Link>
             <Link className="page-link navbar-button" to="/projects">Projects</Link>
+            <Link className="page-link navbar-button" to="/stats" >Stats</Link>
             <a className="page-link navbar-button" href="/Szymon_Szewczyk_CV_.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             <div className="page-link toggle-container" onClick={toggleDarkMode}>
               <div className={`toggle-circle ${darkMode ? 'toggle-circle-dark' : ''}`}>

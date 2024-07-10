@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './views/Home';
 import About from './views/About';
 import Projects from './views/Projects';
+import Stats from './views/Stats';
 import './App.css'; // Global styles
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/stats" element={<Stats />} />
           </Routes>
         </main>
         <Footer darkMode={darkMode}/>

@@ -1,12 +1,18 @@
 import React from 'react';
+import '../App.css'; // Import App.css for styling
 
-const App = () => {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>This is the About me page.</p>
-    </div>
-  );
-}
+const About = () => {
+    return (
+        <div className="view-container">
+            <img src="/port_os.jpg" alt="Profile" className="profile-photo" />
+            <div className="view-content">
+                <h1>About Me</h1>
+                <p>
+                    This is the About page content. You can add more information about yourself here.
+                </p>
+            </div>
+        </div>
+    );
+};
 
-export default App;
+export default About;
