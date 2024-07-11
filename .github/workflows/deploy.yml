@@ -3,10 +3,10 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # This will trigger the action on every push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # This will trigger the action on every pull request to the main branch
+      - main
 
 jobs:
   deploy:
@@ -19,24 +19,24 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Specify the Node.js version
+          node-version: '16'
 
       - name: Check Node.js version
-        run: node -v  # This will print the Node.js version to the logs
+        run: node -v
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./my-portfolio  # Ensure this points to the directory with your package.json
+        working-directory: ./my-portfolio
 
       - name: Build project
         run: npm run build
-        working-directory: ./my-portfolio  # Ensure this points to the directory with your package.json
+        working-directory: ./my-portfolio
 
       - name: Install Vercel CLI
         run: npm install -g vercel
 
       - name: Deploy to Vercel
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Use the secret you added
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: npx vercel --prod
-        working-directory: ./my-portfolio  # Ensure this points to the directory with your package.json
+        working-directory: ./my-portfolio
