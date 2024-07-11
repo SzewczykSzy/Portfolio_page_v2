@@ -98,7 +98,7 @@ const Home = () => {
                     <div className="skill">
                         <div className="skill-icon">🔀</div>
                         <h3>Git</h3>
-                        <p>Version Control</p>
+                        <p>Version Control System</p>
                     </div>
                 </div>
             </div>
