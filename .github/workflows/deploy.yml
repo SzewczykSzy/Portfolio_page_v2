@@ -3,10 +3,10 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  
+      - main
   pull_request:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
@@ -19,18 +19,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
-        working-directory: .  
+        working-directory: ./my-portfolio
 
       - name: Build project
         run: npm run build
-        working-directory: .  
+        working-directory: ./my-portfolio 
 
       - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  
         run: npx vercel --prod
-        working-directory: .  
+        working-directory: ./my-portfolio  
